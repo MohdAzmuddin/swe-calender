@@ -1,20 +1,53 @@
-<<<<<<< HEAD
-# React + Vite
+🗓️ Interactive Wall Calendar Component
+A polished, responsive React calendar component inspired by a physical wall calendar aesthetic. Built for a Frontend Engineering Challenge.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🔗 Live Demo
+**[View the Live Component Here](https://swe-azmuddin.vercel.app/)**
 
-Currently, two official plugins are available:
+## ✨ Features
+* **Wall Calendar Aesthetic**: Features a "spiral-bound" top and a hero image with a custom geometric overlay.
+* **Day Range Selector**: Click a start date and an end date to highlight a range.
+* **Integrated Notes Section**: A dedicated area for monthly memos, styled to match the printed look of the reference design.
+* **Fully Responsive**: Adapts from a large-scale desktop "wall" view to a vertically stacked mobile view.
+* **Date Logic**: Handles month switching and week-start logic using `date-fns`.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠️ Tech Stack
+* **Framework**: [React](https://reactjs.org/) (Vite)
+* **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+* **Date Manipulation**: [date-fns](https://date-fns.org/)
+* **Icons**: [Lucide React](https://lucide.dev/)
 
-## React Compiler
+## 🚀 How to Run Locally
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 1. Clone the repository
+```bash
+git clone <your-repository-link>
+cd wall-calendar
+```
 
-## Expanding the ESLint configuration
+### 2. Install Dependencies
+```bash
+npm install
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# swe-calender
->>>>>>> 601019974e5434af255ed6462832d2ee19c49aa7
+### 3. Run Development Server
+```bash
+npm run dev
+```
+The application will be available at `http://localhost:5173`.
+
+## 🧠 Technical Choices
+* **Tailwind CSS**: Chosen for rapid UI development and the ability to use complex `clip-path` utilities for the geometric design.
+* **Date-FNS**: Used over the native `Date` object to ensure consistent behavior across different browsers and easy calculation of week boundaries.
+* **State Management**: Used React's `useState` for range selection. I implemented a "three-click" logic:
+    1. First click: Sets start date.
+    2. Second click: Sets end date (if after start).
+    3. Third click: Resets and starts a new range.
+
+## 📝 Notes for Evaluators
+* **Frontend Only**: Per the requirements, no backend is used. Notes are stored in local component state.
+* **Design Accuracy**: Special attention was paid to the "Spiral" top and the specific blue geometric overlay from the reference image.
+
+3. **Submit**: Send the **GitHub Link**, the **Vercel Link**, and your **Video** to the hiring team.
+
+Good luck! You've handled the technical hurdles like a pro.
